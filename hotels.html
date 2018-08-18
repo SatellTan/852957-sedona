@@ -23,54 +23,75 @@
       <div class="main-container">
         <h1 class="visually-hidden">Гостиницы</h1>
 
-        <section class="search options">
+        <section class="search-options">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <!-- Здесь будет форма с отборами
-          <ul class="infrastructure options">Инфраструктура:
-            <li class="infrastructure options-item">
-              <p>Бассейн</p>
-            </li>
-            <li class="infrastructure options-item">
-              <p>Парковка</p>
-            </li>
-            <li class="infrastructure options-item">
-              <p>WI-FI</p>
-            </li>
-          </ul>
 
-          <ul class="housing options">Тип жилья:
-            <li class="housing options-item">
-              <p>Гостиница</p>
-            </li>
-            <li class="housing options-item">
-              <p>Мотель</p>
-            </li>
-            <li class="housing options-item">
-              <p>Апартаменты</p>
-            </li>
-          </ul>
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="basin" id="filter-basin" checked>
+                  <label for="filter-basin">Бассейн</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+                  <label for="filter-parking">Парковка</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Wi-Fi" id="filter-Wi-Fi">
+                  <label for="filter-Wi-Fi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
 
-          <p class="cost options">Стоимость в сутки (Р):</p>
-          Здесь будет ползунок с ограничение стоимости
-          <span class="button search options">Показать</span>-->
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <label for="filter-hotel">Гостиница</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                  <label for="filter-motel">Мотель</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <label for="filter-apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
 
+            <input class="visually-hidden filter-input-range" type="range" name="cost"  id="filter-cost" min="0" max="4" value="3" step="0.5" >
+            <label for="filter-cost">Стоимость в сутки (Р):</label>
+
+            <button type="submit" class="filter-button button">Показать</button>
+          </form>
         </section>
 
         <div class="sorting">
           <span>Найдено: 3</span>
-          <span>Сортировка:</span>
-          <ul class="sorting-list">
-            <li class="sorting-item">
-              <p>По цене</p>
-            </li>
-            <li class="sorting-item">
-              <p>По типу</p>
-            </li>
-            <li class="sorting-item">
-              <p>По рейтингу</p>
-            </li>
-          </ul>
+
+          <fieldset>
+            <legend>Сортировка:</legend>
+            <ul>
+              <li class="sorting-item">
+                <input class="visually-hidden sorting-item" type="radio" name="sorting" id="sorting-by-price" checked>
+                <label for="sorting-by-price">По цене</label>
+              </li>
+              <li class="sorting-item">
+                <input class="visually-hidden sorting-item" type="radio" name="sorting" id="sorting-by-type">
+                <label for="sorting-by-type">По типу</label>
+              </li>
+              <li class="sorting-item">
+                <input class="visually-hidden sorting-item" type="radio" name="sorting" id="sorting-by-rating">
+                <label for="sorting-by-rating">По рейтингу</label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
+
 
         <h2 class="visually-hidden">Список гостиниц</h2>
 
@@ -85,8 +106,8 @@
           <p class="info-booking">
             <a class="button-info" href="#">Подробнее</a>
             <a class="button-booking" href="#">Забронировать</a>
-            <span class="result-rating">Рейтинг: 8,5</span>
           </p>
+          <span class="result-rating">Рейтинг: 8,5</span>
         </section>
 
         <section class="result">
@@ -100,8 +121,8 @@
           <p class="info-booking">
             <a class="button-info" href="#">Подробнее</a>
             <a class="button-booking" href="#">Забронировать</a>
-            <span class="result-rating">Рейтинг: 8,9</span>
           </p>
+          <span class="result-rating">Рейтинг: 8,9</span>
         </section>
 
         <section class="result">
@@ -115,9 +136,10 @@
           <p class="info-booking">
             <a class="button-info" href="#">Подробнее</a>
             <a class="button-booking" href="#">Забронировать</a>
-            <span class="result-rating">Рейтинг: 9,2</span>
           </p>
+          <span class="result-rating">Рейтинг: 9,2</span>
         </section>
+
       </div>
     </main>
 

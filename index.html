@@ -79,13 +79,32 @@
         <section class="hotel-search">
           <span class="hotel-question">Заинтересовались?</span>
           <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+
           <h2>Поиск гостиницы в Седоне</h2>
-          <!-- Здесь будет форма
-            Дата заезда:
+
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="hotel-search-item">
+              <label for="input-date">Дата заезда:</label>
+              <input id="input-date" type="text" name="input-date" value="" placeholder="18.08.2018">
+            </p>
+            <p class="hotel-search-item">
+              <label for="output-date">Дата выезда:</label>
+              <input id="output-date" type="text" name="output-date" value="" placeholder="25.08.2018">
+            </p>
+            <p class="hotel-search-item">
+              <label for="adults">Взрослые:</label>
+              <input id="adults" type="text" name="adults" value="2" placeholder="2">
+            </p>
+            <p class="hotel-search-item">
+              <label for="children">Дети:</label>
+              <input id="children" type="text" name="children" value="0" placeholder="0">
+            </p>
+            <button class="button" type="submit">Найти</button>
+          </form>
+<!--        Дата заезда:
             Дата выезда:
             Взрослые:
-            Дети: -->
-          <span class="button hotel-search">Найти</span>
+            Дети:          -->
         </section>
       </div>
     </main>

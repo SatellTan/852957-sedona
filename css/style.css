@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  background-position: top center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-navigation-current {
+  color: #766357;
+}
+
+.sedona-article {
+  /*color: #ffffff;*/
+  /*background-color: #43s393f;*/
+  width: 1200px;
+	height: 560px;
+  background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 50% 100%, 50% 50%, 50% 50%;
+}
+
+h1,
+.button-search {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.main-container p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+p.five-reason {
+  font-weight: 400;
+}
+
+.reason-blue{
+  color: #ffffff;
+  background-color: rgb(129, 179, 210);
+}
+.reason-blue p {
+  color: #ffffff;
+}
+
+.reason-grey{
+  /*color: #ffffff;*/
+  background-color: rgb(238, 238, 238);
+}
+
+.service-housing {
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.service-food {
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.service-souvenirs {
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+.hotel-search {
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+p.hotel-question {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+p.requesting-dates {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+p.hotel-search-item {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.input-item {
+  background-color : rgb(242, 242, 242);
+  border: none;
+}
+
+.input-item:focus,
+.input-item:hover {
+  background-color : rgb(235, 235, 235);
+  border: none;
+}
+
+.hotel-search-form input:focus {
+  background-color : rgb(255, 255, 255);
+  border: 2px solid rgb(229, 229, 229);
+}
+
+
+.search-options {
+  color: #ffffff;
+  background-color: rgb(118, 99, 87);
+  background-image: url("../img/filter-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.filter  ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.filter-input:disabled + label {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color : #000000;
+  background-color: #ffffff;
+}
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.sorting  ul {
+  list-style: none;
+}
+
+span.found {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sorting-item a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b3d2;
+}
+
+.sorting-item a:focus,
+.sorting-item a:hover {
+  color: #81b3d2;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #81b3d2
+}
+
+.sorting-item a:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+.sorting-trigon a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-trigon a:focus,
+.sorting-trigon a:hover {
+  color: #000000;
+}
+
+.sorting-trigon a:active,
+.sorting-item-current a,
+.sorting-trigon-current a{
+  color: #81b3d2;
+  text-decoration: none;
+}
+
+.result h3{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.result span{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+span.result-rating{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #666666;
+  background-color: rgb(242, 242, 242);
+}
+
+a.button-info,
+.button-find {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: rgb(129, 179, 210);
+  border: none;
+}
+
+a.button-info:focus,
+a.button-info:hover,
+.button-find:focus,
+.button-find:hover {
+  background-color: rgb(102, 158, 192);
+}
+
+a.button-info:active,
+.button-find:active {
+  background-color: rgb(84, 150, 189);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+a.button-booking,
+.button-search {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: rgb(118, 99, 87);
+  border: none;
+}
+
+.button-search,
+.button-find {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+a.button-booking:focus,
+a.button-booking:hover,
+.button-search:focus,
+.button-search:hover {
+  background-color: rgb(96, 78, 67);
+}
+
+a.button-booking:active,
+.button-search:active {
+  background-color: rgb(80, 62, 51);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-link {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+a.social-button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: rgb(129, 179, 210);
+  border: none;
+}
+
+a.social-button:focus,
+a.social-button:hover {
+  background-color: rgb(102, 158, 192);
+}
+
+a.social-button:active {
+  background-color: rgb(84, 150, 189);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+p.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* Менять цвет svg-картинки Логотип HTML Academy
+.footer-copyright a {
+  color: #000000;
+}
+
+.footer-copyright a:focus,
+.footer-copyright a:hover {
+  color: #81b3d2;
+}
+
+.footer-copyright a:active {
+  color: #bdbbbc;
+}*/

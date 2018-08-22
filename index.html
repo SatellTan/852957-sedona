@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -25,86 +28,99 @@
           <h1>Седона-небольшой городок в Аризоне, заслуживающий большего!»</h1>
         </article>
 
-        <p>Рассмотрим 5 причин,по которым Седона круче, чем гранд каньон!</p>
+        <p class="five-reason">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <h2 class="visually-hidden">Преимущества</h2>
 
         <section class="reason-left">
-          <img src="img/city.jpg" width="800" height="400" alt="Виды Седоны">
-          <h3>Настоящий городок</h3>
-          <span>-1-</span>
-          <p>Седона-не аттракцион для туристов, там течёт своя жизнь</p>
+          <div>
+            <img src="img/city.jpg" width="800" height="400" alt="Виды Седоны">
+          </div>
+          <div class="reason-blue">
+            <h3>Настоящий городок</h3>
+            <p>— №1 —</p>
+            <p>Седона-не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
         </section>
 
 
         <h2 class="visually-hidden">Сервис</h2>
-        <section class="service">
+        <section class="service-housing">
           <h3>Жильё</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </section>
-        <section class="service">
+        <section class="service-food">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
         </section>
-        <section class="service">
+        <section class="service-souvenirs">
           <h3>Сувениры</h3>
           <p>Не только китайского, но и местного производства!</p>
         </section>
 
 
         <section class="reason-right">
-          <img src="img/bridge.jpg" width="800" height="400" alt="Мост дьявола в Седоне">
-          <h3>Там есть мост дьявола</h3>
-          <span>-2-</span>
-          <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+          <div>
+            <img src="img/bridge.jpg" width="800" height="400" alt="Мост дьявола в Седоне">
+          </div>
+          <div class="reason-blue">
+            <h3>Там есть мост дьявола</h3>
+            <p>— №2 —</p>
+            <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+          </div>
         </section>
 
         <section class="reason">
-          <h3>Небольшая площадь</h3>
-          <span>-3-</span>
-          <p>Все достопримечательности находятся очень близко</p>
+          <div class="reason-grey">
+            <h3>Небольшая площадь</h3>
+            <p>— №3 —</p>
+            <p>Все достопримечательности находятся очень близко</p>
+          </div>
         </section>
 
         <section class="reason">
-          <h3>Красивая дорога</h3>
-          <span>-4-</span>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <div class="reason-grey">
+            <h3>Красивая дорога</h3>
+            <p>— №4 —</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
         </section>
 
         <section class="reason">
-          <h3>Мало туристов</h3>
-          <span>-5-</span>
-          <p>Большинство едет в гранд каньон и толпится там</p>
+          <div class="reason-grey">
+            <h3>Мало туристов</h3>
+            <p>— №5 —</p>
+            <p>Большинство едет в гранд каньон и толпится там</p>
+          </div>
         </section>
+
+        <div class="search-query">
+          <p class="hotel-question">Заинтересовались?</p>
+          <p class="requesting-dates">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+
+          <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
+        </div>
 
         <section class="hotel-search">
-          <span class="hotel-question">Заинтересовались?</span>
-          <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-
-          <h2>Поиск гостиницы в Седоне</h2>
-
+          <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="hotel-search-item">
               <label for="input-date">Дата заезда:</label>
-              <input id="input-date" type="text" name="input-date" value="" placeholder="18.08.2018">
+              <input class="input-item" id="input-date" type="text" name="input-date" value="" placeholder="18.08.2018">
             </p>
             <p class="hotel-search-item">
               <label for="output-date">Дата выезда:</label>
-              <input id="output-date" type="text" name="output-date" value="" placeholder="25.08.2018">
+              <input class="input-item" id="output-date" type="text" name="output-date" value="" placeholder="25.08.2018">
             </p>
             <p class="hotel-search-item">
               <label for="adults">Взрослые:</label>
-              <input id="adults" type="text" name="adults" value="2" placeholder="2">
+              <input class="input-item" id="adults" type="text" name="adults" value="2" placeholder="2">
             </p>
             <p class="hotel-search-item">
               <label for="children">Дети:</label>
-              <input id="children" type="text" name="children" value="0" placeholder="0">
+              <input class="input-item" id="children" type="text" name="children" value="0" placeholder="0">
             </p>
-            <button class="button" type="submit">Найти</button>
+            <button class="button-find" type="button">Найти</button>
           </form>
-<!--        Дата заезда:
-            Дата выезда:
-            Взрослые:
-            Дети:          -->
         </section>
       </div>
     </main>
@@ -122,10 +138,13 @@
           </ul>
         </div>
 
-        <span>Website by</span>
-        <a class="footer-copyright" href="https://htmlacademy.ru">
-          <img src="img/htmlacademy-logo.svg" width="100" height="60" alt="Логотип HTML Academy">
-        </a>
+        <p class="footer-copyright">
+          <b>Website by</b>
+          <a class="footer-copyright" href="https://htmlacademy.ru">
+            <img src="img/logo-htmlacademy.svg" width="100" height="60" alt="Логотип HTML Academy">
+          </a>
+        </p>
+
       </div>
     </footer>
 

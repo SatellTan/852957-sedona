@@ -38,24 +38,22 @@ a {
   color: #766357;
 }
 
-.sedona-article {
-  /*color: #ffffff;*/
-  /*background-color: #43s393f;*/
-  width: 1200px;
-	height: 560px;
+.welcome {
   background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 50% 100%, 50% 50%, 50% 50%;
+  background-position: 50% 100%, 50% 50%, 0 -53px;
+  background-size: auto, 459px 353px, cover;
+
 }
 
-h1,
+main h1,
 .button-search {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
-h3 {
+main h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -69,18 +67,26 @@ h3 {
 }
 p.five-reason {
   font-weight: 400;
+  padding-bottom: 52px;
+  text-align: center;
 }
 
-.reason-blue{
+.reason{
   color: #ffffff;
+  text-align: center;
   background-color: rgb(129, 179, 210);
 }
+
+.service {
+  text-align: center;
+}
+
 .reason-blue p {
   color: #ffffff;
 }
 
 .reason-grey{
-  /*color: #ffffff;*/
+  color: #000000;
   background-color: rgb(238, 238, 238);
 }
 
@@ -105,13 +111,16 @@ p.five-reason {
 .hotel-search {
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
+  /*background-position: 50% 100%, 50% 50%, 0 -53px;*/
+  /*background-size: auto, 459px 353px, cover;*/
 }
 
 p.hotel-question {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 
 p.requesting-dates {
@@ -141,7 +150,6 @@ p.hotel-search-item {
   background-color : rgb(255, 255, 255);
   border: 2px solid rgb(229, 229, 229);
 }
-
 
 .search-options {
   color: #ffffff;
@@ -360,6 +368,201 @@ p.footer-copyright {
   font-weight: 400;
   color: #000000;
 }
+
+/* ----- Сеточные стили ----- */
+
+.main-container {
+  /*min-width: 1200px;*/
+  width: 1200px;
+}
+
+ .main-navigation{
+   display: flex;
+ }
+
+ .welcome {
+   width: 1200px;
+ 	height: 510px;
+  margin-bottom: 59px;
+}
+
+ main h1 {
+   /*padding: auto;*/
+   padding-bottom: 33px;
+   /*padding-up: 59px;*/
+ }
+
+ .container{
+   display: flex;
+   flex-wrap: wrap;
+   /*justify-content: space-between;*/
+    /*margin: 0;
+    padding: 0;*/
+ }
+
+ .reason{
+   width: 400px;
+   height: 256px;
+   /*padding-top: 45;*/
+ }
+
+ .service{
+   width: 400px;
+   height: 256px;
+ }
+
+ .sity-views {
+   height: 256px;
+ }
+
+ .city-views img { /* чтобы картинка вписывалась в размеры своего блока*/
+    max-width: 100%;
+    height: auto;
+    max-height:100%
+ }
+
+ .search-query {
+   /*height: 291px;*/
+ }
+
+ .hotel-question,
+ .requesting-dates{
+   width: 444px;
+   text-align: center;
+   margin: auto;
+ }
+
+.hotel-question{
+  margin-top: 54px;
+}
+
+.button-search{
+  width: 568px;
+  height: 86px;
+  margin-top: 50px;
+}
+
+.hotel-search {
+  height: 473px;
+  display: flex;
+}
+
+.hotel-search-form {
+  width: 458px;
+  height: 285px;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+   /*border: 2px solid black;*/
+   padding: 55px;
+}
+
+.button-find {
+  height: 58px;
+}
+
+.footer-container {
+  padding: 35px 0;
+  width: 1200px;
+  /*height: 58px;*/
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  width: 155px;
+}
+
+.footer-social {
+  width: 155px;
+  margin-left: 210px;
+  margin-right: 220px;
+}
+
+.footer-copyright {
+  width: 205px;
+  /*margin: 0;
+  margin-left: auto;*/
+}
+
+.filter {
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.filter-cost {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-options {
+  padding-top: 28px;
+  padding-bottom: 31px;
+}
+
+.sorting {
+  display: flex;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.sorting-list {
+  width: 242px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting-list-trigon {
+  display: flex;
+  margin-left: auto;
+}
+
+.result img {
+  display: block;
+}
+
+.result {
+  border-top: 1px solid rgb(229, 229, 229);
+  display: flex;
+  padding: 30px 73px;
+}
+
+.result:last-child {
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.hotel-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+/*.info-booking {
+  display: flex;
+}*/
+
+.result h3 {
+  margin: 0;
+}
+
+
+
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+
+
+
+
+
 
 /* Менять цвет svg-картинки Логотип HTML Academy
 .footer-copyright a {

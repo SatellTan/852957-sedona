@@ -1,3 +1,10 @@
+
+/** {
+  margin: 0;
+  padding: 0;
+}*/
+
+
 body {
   margin: 0;
   padding: 0;
@@ -18,11 +25,46 @@ a {
 }
 
 .site-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navigation-left {
+  display: inline-block;
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.navigation-right {
+  display: inline-block;
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
 }
 
 .site-navigation a {
   color: #000000;
+  display: block;
+  width: 100px;
+  vertical-align: middle;
+}
+
+.navigation-left a {
+  text-align: left;
+  margin: 15px 68px 15px 72px;
+}
+
+.navigation-right a {
+  text-align: right;
+  margin: 15px 72px 15px 70px;
 }
 
 .site-navigation a:hover,
@@ -39,11 +81,13 @@ a {
 }
 
 .welcome {
+  width: 1200px;
+  height: 510px;
+  margin-bottom: 57px;
   background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 50% 100%, 50% 50%, 0 -53px;
+  background-position: 50% 100%, 50% 50%, 0 -55px;
   background-size: auto, 459px 353px, cover;
-
 }
 
 main h1,
@@ -57,6 +101,11 @@ main h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  width: 160px;
+  margin-top: 46px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-container p {
@@ -65,20 +114,34 @@ main h3 {
   font-weight: 400;
   color: #333333;
 }
+
+.five-reason {
+  margin: 0;
+  margin-bottom: 53px;
+  text-align: center;
+}
+
 p.five-reason {
   font-weight: 400;
-  padding-bottom: 52px;
-  text-align: center;
+  /*padding-bottom: 52px;*/
+  /*text-align: center;*/
 }
 
 .reason{
   color: #ffffff;
   text-align: center;
   background-color: rgb(129, 179, 210);
+  width: 400px;
+  min-height: 256px;
 }
 
-.service {
-  text-align: center;
+.reason p,
+.service p {
+  margin: 10px 48px 21px 48px;
+}
+
+.service p {
+  margin-bottom: 83px;
 }
 
 .reason-blue p {
@@ -90,22 +153,46 @@ p.five-reason {
   background-color: rgb(238, 238, 238);
 }
 
-.service-housing {
+.service {
+  text-align: center;
+}
+
+.service h3 {
+  position: relative;
+  margin-top: 161px;
+}
+
+.service-housing h3::before {
+  content: "";
+  width: 84px;
+  height: 84px;
+  top: -101px;
+  left: 42px;
+  position: absolute;
   background-image: url("../img/icon-1.svg");
   background-repeat: no-repeat;
-  background-position: 50% 25%;
 }
 
-.service-food {
+.service-food h3::before {
+  content: "";
+  width: 84px;
+  height: 84px;
+  top: -101px;
+  left: 42px;
+  position: absolute;
   background-image: url("../img/icon-3.svg");
   background-repeat: no-repeat;
-  background-position: 50% 25%;
 }
 
-.service-souvenirs {
+.service-souvenirs h3::before {
+  content: "";
+  width: 84px;
+  height: 84px;
+  top: -105px;
+  left: 48px;
+  position: absolute;
   background-image: url("../img/icon-2.svg");
   background-repeat: no-repeat;
-  background-position: 50% 25%;
 }
 
 /*.hotel-search {
@@ -121,13 +208,16 @@ p.hotel-question {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 24px;
 }
 
 p.requesting-dates {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
+  margin-bottom: 46px;
+
 }
 
 .form-group {
@@ -374,23 +464,24 @@ body {
   /*min-width: 1200px;*/
   margin: 0 auto;
   max-width: 1200px;
+  position: relative;
 }
 
-.main-navigation {
-  display: flex;
-}
-
-.welcome {
-  width: 1200px;
-  height: 510px;
-  margin-bottom: 59px;
+.main-navigation img {
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
 }
 
 main h1 {
- /*padding: auto;*/
- padding-bottom: 33px;
- text-align: center;
- /*padding-up: 59px;*/
+  /*margin: 0;*/
+  padding: 0;
+  display: block;
+  width: 440px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  text-align: center;
+  /*padding-up: 59px;*/
 }
 
 .container {
@@ -401,32 +492,36 @@ main h1 {
   padding: 0;*/
 }
 
-.reason {
-  width: 400px;
-  height: 256px;
+/*.reason {
+  /*height: 256px;*/
  /*padding-top: 45;*/
-}
+/*}*/
 
 .service{
   width: 400px;
-  height: 256px;
+  /*height: 256px;*/
 }
 
-.sity-views {
-  height: 256px;
+.city-views {
+  /*height: 256px;*/
+  background-color: rgb(129, 179, 210);
 }
 
-.city-views img,
-.search-query img,
-.city-views img { /* чтобы картинка вписывалась в размеры своего блока*/
-  max-width: 100%;
+img {
+  max-width: 100%;  /* чтобы картинка вписывалась в размеры своего блока и не было отступа снизу*/
   height: auto;
-  /*max-height:100%*/
   display: block;
 }
+/*
+.search-query img,
+.city-views img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}*/
 
 .search-query {
-  /*height: 291px;*/
+  position: relative;
 }
 
 .hotel-question,
@@ -436,24 +531,28 @@ main h1 {
   margin: auto;
 }
 
-.hotel-question{
-  margin-top: 54px;
-}
-
 .button-search{
+  display: block;
   width: 568px;
   height: 86px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;  
+  margin: 0 auto;
 }
 
 .hotel-search {
-  height: 473px;
-  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 240px;
+  margin-left: -284px;
+  width: 458px;
+  height: 285px;
+
+  /*height: 473px;*/
+  /*display: flex;*/
 }
 
 .hotel-search-form {
+  /*position: absolute;*/
+  /*border: 1px solid black;*/
   width: 458px;
   height: 285px;
   background-color: #ffffff;
@@ -557,14 +656,30 @@ main h1 {
 }
 
 
-.visually-hidden {
+/*.visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
-}
+}*/
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
 
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 
 

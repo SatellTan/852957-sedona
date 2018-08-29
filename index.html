@@ -11,12 +11,16 @@
     <header>
       <nav class="main-navigation">
         <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип города Седона">
-        <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
+        <div class="site-navigation">
+          <div class="navigation-left">
+            <a href="#">Информация</a>
+            <a href="#">Фото и видео</a>
+          </div>
+          <div class="navigation-right">
+            <a href="hotels.html">Гостиницы</a>
+            <a href="#">Карта штата</a>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -25,7 +29,7 @@
         <article class="sedona-article">
           <div class="welcome"></div>
           <div>
-            <h1>Седона-небольшой городок в Аризоне, заслуживающий большего!»</h1>
+            <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
           </div>
         </article>
 
@@ -36,7 +40,7 @@
           <section class="reason reason-blue">
             <h3>Настоящий городок</h3>
             <p>&mdash;&nbsp;&#8470;&nbsp;1 &mdash;</p>
-            <p>Седона-не аттракцион для туристов, там течёт своя жизнь</p>
+            <p>Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов, там течёт своя жизнь</p>
           </section>
           <div class="city-views">
             <img src="img/city.jpg" width="800" height="400" alt="Виды Седоны">
@@ -57,32 +61,32 @@
             <p>Не только китайского, но и местного производства!</p>
           </section>
 
+          <div class="city-views">
+            <img src="img/bridge.jpg" width="800" height="400" alt="Мост дьявола в Седоне">
+          </div>
 
           <section class="reason reason-blue">
             <h3>Там есть<br>мост дьявола</h3>
             <p>&mdash;&nbsp;&#8470;&nbsp;2 &mdash;</p>
             <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
           </section>
-          <div class="city-views">
-            <img src="img/bridge.jpg" width="800" height="400" alt="Мост дьявола в Седоне">
-          </div>
 
           <section class="reason reason-grey">
               <h3>Небольшая площадь</h3>
               <p>&mdash;&nbsp;&#8470;&nbsp;3 &mdash;</p>
-              <p>Все достопримечательности находятся очень близко</p>
+              <p>Все достопримечательности находятся&nbsp;очень близко</p>
           </section>
 
           <section class="reason reason-grey">
             <h3>Красивая дорога</h3>
             <p>&mdash;&nbsp;&#8470;&nbsp;4 &mdash;</p>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
           </section>
 
           <section class="reason reason-grey">
             <h3>Мало туристов</h3>
             <p>&mdash;&nbsp;&#8470;&nbsp;5 &mdash;</p>
-            <p>Большинство едет в гранд каньон и толпится там</p>
+            <p>Большинство едет в гранд каньон и&nbsp;толпится там</p>
           </section>
         </div>
 
@@ -93,6 +97,29 @@
           <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
 
           <img src="img/map.jpg" width="1718" height="748" alt="Карта с местоположением Седоны">
+
+          <section class="hotel-search">
+            <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+            <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="form-group">
+                <label for="input-date">Дата заезда:</label>
+                <input class="input-item" id="input-date" type="text" name="input-date" value="" placeholder="18.08.2018">
+              </div>
+              <div class="form-group">
+                <label for="output-date">Дата выезда:</label>
+                <input class="input-item" id="output-date" type="text" name="output-date" value="" placeholder="25.08.2018">
+              </div>
+              <div class="form-group">
+                <label for="adults">Взрослые:</label>
+                <input class="input-item" id="adults" type="text" name="adults" value="2" placeholder="2">
+              </div>
+              <div class="form-group">
+                <label for="children">Дети:</label>
+                <input class="input-item" id="children" type="text" name="children" value="0" placeholder="0">
+              </div>
+              <button class="button-find" type="button">Найти</button>
+            </form>
+          </section>
         </div>
 
       </div>
@@ -120,29 +147,6 @@
 
       </div>
     </footer>
-
-    <section class="hotel-search">
-      <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-      <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-group">
-          <label for="input-date">Дата заезда:</label>
-          <input class="input-item" id="input-date" type="text" name="input-date" value="" placeholder="18.08.2018">
-        </div>
-        <div class="form-group">
-          <label for="output-date">Дата выезда:</label>
-          <input class="input-item" id="output-date" type="text" name="output-date" value="" placeholder="25.08.2018">
-        </div>
-        <div class="form-group">
-          <label for="adults">Взрослые:</label>
-          <input class="input-item" id="adults" type="text" name="adults" value="2" placeholder="2">
-        </div>
-        <div class="form-group">
-          <label for="children">Дети:</label>
-          <input class="input-item" id="children" type="text" name="children" value="0" placeholder="0">
-        </div>
-        <button class="button-find" type="button">Найти</button>
-      </form>
-    </section>
 
   </body>
 </html>

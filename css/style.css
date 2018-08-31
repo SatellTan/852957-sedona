@@ -35,6 +35,7 @@ a {
 
 .navigation-left {
   display: inline-block;
+  vertical-align: middle;
   width: 45%;
   display: flex;
   flex-wrap: wrap;
@@ -43,6 +44,7 @@ a {
 
 .navigation-right {
   display: inline-block;
+  vertical-align: middle;
   width: 45%;
   display: flex;
   flex-wrap: wrap;
@@ -426,19 +428,44 @@ a.button-booking:active,
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  display: block;
+  width: 240px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  padding-left: 25px;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  /*margin-top: 2px;
+  margin-left: 7px;*/
+  width: 150px;
+  list-style: none;
+}
+
+.footer-social {
+  /*width: 155px;*/
+  text-align: center;
+  /*margin-left: 210px;
+  margin-right: 220px;*/
+}
+
+.social-button {
+  display: block;
+  width: 46px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a.social-button {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
-  vertical-align: middle;
-
   background-color: rgb(129, 179, 210);
-  border: none;
 }
 
 a.social-button:focus,
@@ -448,14 +475,63 @@ a.social-button:hover {
 
 a.social-button:active {
   background-color: rgb(84, 150, 189);
-  color: rgba(255, 255, 255, 0.3);
 }
 
-p.footer-copyright {
+.social-button:active path {
+  opacity: 0.3;
+}
+
+.footer-copyright {
+  width: 240px;
+  /*text-align: center;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-copyright b {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   color: #000000;
+  padding-left: 11px;
+}
+
+.footer-copyright a {
+  padding-right: 22px;
+
+  /*display: block;
+  width: 46px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.footer-copyright b,
+.footer-copyright a {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.footer-copyright a {/*img {*/
+  width: 116px;
+  height: 40px;
+}
+
+.footer-copyright svg:active path {
+  fill: #bdbbbc;
+}
+
+.footer-copyrigh svg:focus path,
+.footer-copyright svg:hover path {
+  fill: #81b3d2;
+}
+
+.footer-copyright svg:active path {
+  fill: #bdbbbc;
 }
 
 /* ----- Сеточные стили ----- */
@@ -565,32 +641,20 @@ img {
 }
 
 .button-find {
-  height: 58px;
+  min-height: 58px;
 }
 
 .footer-container {
+  position: absolute;
+  top: 100%;
+  box-sizing: border-box;
+  margin-top: -120px;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 35px 0;
+  padding: 36px 73px;
   width: 1200px;
-  /*height: 58px;*/
+  min-height: 120px;
   display: flex;
-  justify-content: center;
-}
-
-.footer-link {
-  width: 155px;
-}
-
-.footer-social {
-  width: 155px;
-  margin-left: 210px;
-  margin-right: 220px;
-}
-
-.footer-copyright {
-  width: 205px;
-  /*margin: 0;
-  margin-left: auto;*/
+  justify-content: space-between;
 }
 
 .filter {
@@ -684,18 +748,23 @@ input[type="radio"].visually-hidden {
 
 
 
-
-
-/* Менять цвет svg-картинки Логотип HTML Academy
-.footer-copyright a {
-  color: #000000;
+body:before,
+body:after {
+  content: " ";
+  clear: both;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 40px;
 }
-
-.footer-copyright a:focus,
-.footer-copyright a:hover {
-  color: #81b3d2;
+body:before {
+    /*box-shadow: inset 0 0 2px -15px rgb(222, 222, 222);/*-15px 0 15px -15px #000;*/
+    /*background-image: linear-gradient(to left, rgba(222, 222, 222, 0.35), rgba(242, 242, 242, 0.35));
+    left: -40px;*/
 }
-
-.footer-copyright a:active {
-  color: #bdbbbc;
-}*/
+body:after {
+    box-shadow: inset 40px 0 50px -30px rgba(222, 222, 222, 0.7),
+                inset 40px 0 3px 0 rgba(242, 242, 242, 0.35);/*15px 0 15px -15px #000;
+    /*background-image: linear-gradient(to right, rgba(222, 222, 222, 0.35), rgba(242, 242, 242, 0.35));*/
+    right: -40px;
+}

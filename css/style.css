@@ -665,23 +665,68 @@ img {
 .button-search{
   display: block;
   width: 568px;
-  height: 86px;
+  /*height: 86px;*/
   margin: 0 auto;
+  padding: 30px 0;
 }
+
+/*.hotel-question,
+.requesting-dates,
+.button-search {
+  z-index: 4;
+}*/
 
 .hotel-search {
   position: absolute;
+  z-index: 2;
   left: 50%;
   top: 240px;
   margin-left: -284px;
   width: 458px;
-  height: 285px;
+  /* height: 285px;*/
+  display: none;
 }
 
-/*@keyframes appearance {
-  0% {width: 0;}
-  100% {width: 100%;}
-}*/
+.modal-show {
+  /*height: 0;*/
+  display: block;
+  animation: appearance 3s linear;
+}
+
+@keyframes appearance {
+  /*0% {width: : 0;}
+  50% {width: : 50%;}
+  100% {width: : 100%;}*/
+
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+/*
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+*/
 
 
 
@@ -805,11 +850,12 @@ img {
 .button-find {
   width: 458px;
   margin-top: 24px;
-  height: 58px;
+  padding: 16px 0;
 }
 
 .footer-container {
   position: absolute;
+  z-index: 2;
   bottom: 0;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.9);
@@ -938,10 +984,11 @@ img {
 
 .btn-transparent {
   display: block;
+  width: 138px;
   box-sizing: border-box;
   margin: 0 auto;
   margin-right: 95px;
-  padding: 6px 34px;
+  padding: 6px 0;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -1012,6 +1059,12 @@ img {
   display: inline-block;
   min-width: 110px;
   margin-right: 2px;
+}
+
+.search-query iframe {
+  position: absolute;
+  z-index: 1;
+  border: none;
 }
 
 .visually-hidden:not(:focus):not(:active),

@@ -10,8 +10,10 @@ body {
   color: #000000;
   text-transform: uppercase;
 
-  background-color: #ffffff;
   background-position: top center;
+  /*background-position: top -40px bottom 40px;*/
+  /*background-color: #f2f2f2;*/
+
 }
 
 a {
@@ -681,8 +683,9 @@ img {
   z-index: 2;
   left: 50%;
   top: 240px;
-  margin-left: -284px;
-  width: 458px;
+  /*width: 458px;*/
+  /*margin-left: -284px;*/
+  transform: translateX(-50%);
   /* height: 285px;*/
   display: none;
 }
@@ -690,7 +693,7 @@ img {
 .modal-show {
   /*height: 0;*/
   display: block;
-  animation: appearance 3s linear;
+  animation: appearance 2s linear;
 }
 
 @keyframes appearance {
@@ -699,13 +702,13 @@ img {
   100% {width: : 100%;}*/
 
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateX(-50%);
   }
   50% {
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-50%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0) translateX(-50%);
   }
 }
 
@@ -1067,9 +1070,10 @@ img {
   border: none;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden:not(:focus):not(:active)/*,
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="radio"].visually-hidden */
+{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1081,6 +1085,13 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
 
 body:before,
 body:after {

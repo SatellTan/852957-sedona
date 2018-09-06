@@ -1,4 +1,4 @@
-
+﻿
 body {
   margin: 0;
   padding: 0;
@@ -10,10 +10,15 @@ body {
   color: #000000;
   text-transform: uppercase;
 
-  background-position: top center;
-  /*background-position: top -40px bottom 40px;*/
-  /*background-color: #f2f2f2;*/
+  /*background-position: top center;*/
 
+  /*background-size: calc(100%+80px) 100%;
+  background-position: -40px top;*/
+  background-color: #ffffff;
+}
+
+html {
+  background-color: #f2f2f2;
 }
 
 a {
@@ -36,7 +41,8 @@ a {
   width: 45%;
   display: flex;
   flex-wrap: wrap;
-  padding: 15px 130px 15px 72px;
+  /*padding: 15px 130px 15px 72px;*/
+  padding: 15px 10.83% 15px 6%;
   justify-content: space-between;
 }
 
@@ -48,7 +54,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-  padding: 15px 72px 15px 140px;
+  /*padding: 15px 72px 15px 140px;*/
+  padding: 15px 6% 15px 11.67%;
   justify-content: space-between;
 
 }
@@ -84,13 +91,14 @@ a.site-navigation-current {
 }
 
 .welcome {
-  width: 1200px;
+  width: 100%;/*1200px;*/
   height: 510px;
   margin-bottom: 57px;
   background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 50% 100%, 50% 50%, 0 -55px;
-  background-size: auto, 459px 353px, cover;
+  background-position: /*50% 100%*/center bottom, 50% 50%, 0 21.5%;/*-55px;*/
+  /*background-size: auto, 459px 353px, cover;*/
+  background-size: 100% 59px, 459px 353px, 100% auto;
 }
 
 main h1,
@@ -132,7 +140,7 @@ p.five-reason {
   color: #ffffff;
   text-align: center;
   background-color: rgb(129, 179, 210);
-  width: 400px;
+  width: calc(100% / 3);/*400px;*/
   min-height: 256px;
 }
 
@@ -155,6 +163,7 @@ p.five-reason {
 }
 
 .service {
+  width: calc(100% / 3);/*400px;*/
   text-align: center;
 }
 
@@ -316,7 +325,7 @@ p.requesting-dates {
   line-height: 18px;
   font-weight: 400;
   display: flex;
-  padding: 29px 73px;
+  padding: 29px 6.083%;/*73px;*/
   padding-bottom: 32px;
   vertical-align: baseline;
 }
@@ -616,6 +625,7 @@ a.social-button:active {
 body {
   margin: 0 auto;
   max-width: 1200px;
+  min-width: 768px;
   position: relative;
 }
 
@@ -639,18 +649,25 @@ main h1 {
   flex-wrap: wrap;
 }
 
-.service{
-  width: 400px;
-}
-
 .city-views {
+  width: calc(100%/3*2);
   background-color: rgb(129, 179, 210);
+  overflow: hidden;
 }
 
 img {
   max-width: 100%;  /* чтобы картинка вписывалась в размеры своего блока и не было отступа снизу*/
   height: auto;
   display: block;
+}
+
+.city-views img {
+width: 100%;
+height: auto;
+/*height: 100%;*/
+text-align:center;
+min-height: 100%;
+min-width: 100%;
 }
 
 .search-query {
@@ -857,14 +874,16 @@ img {
 }
 
 .footer-container {
+  min-height: 120px;
+  width: 100%;/*1200px;*/
   position: absolute;
   z-index: 2;
   bottom: 0;
+  /*top: calc(100%-120px);*/
+  /*transform: translateY(-);*/
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 36px 73px;
-  width: 1200px;
-  min-height: 120px;
+  padding: 36px 6.083%;/*73px;*/
   display: flex;
   justify-content: space-between;
 }
@@ -878,8 +897,8 @@ img {
   display: flex;
   padding-top: 28px;
   padding-bottom: 31px;
-  padding-left: 73px;
-  padding-right: 72px;
+  padding-left: 6.083%;/*73px;*/
+  padding-right: 6%;/*72px;*/
 }
 
 .filter-range {
@@ -991,6 +1010,7 @@ img {
   box-sizing: border-box;
   margin: 0 auto;
   margin-right: 95px;
+  margin-left: 85px;
   padding: 6px 0;
   font-size: 14px;
   line-height: 20px;
@@ -1011,7 +1031,7 @@ img {
   border-top: 1px solid rgb(229, 229, 229);
   display: flex;
   box-sizing: border-box;
-  padding: 30px 73px;
+  padding: 30px 6.083%;/*73px;*/
   padding-top: 24px;
 }
 
@@ -1065,6 +1085,11 @@ img {
 }
 
 .search-query iframe {
+  /*width="1200";
+  height="593"*/
+  width: 100%;
+  height: 593px;
+
   position: absolute;
   z-index: 1;
   border: none;
@@ -1093,7 +1118,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-body:before,
+/*body:before,
 body:after {
   content: " ";
   clear: both;
@@ -1101,16 +1126,22 @@ body:after {
   position: absolute;
   top: 0;
   width: 40px;
-}
+}*/
 
-body:before {
-  /*box-shadow: inset -40px 0 50px -30px rgba(222, 222, 222, 0.6), inset 40px 0 3px 0 rgba(242, 242, 242, 0.3);*/
+/*body:before {
   box-shadow: inset -40px 0 15px -35px rgba(0, 1, 1, 0.2), inset 40px 0 0 0 rgba(242, 242, 242, 1);
   left: -40px;
 }
 
 body:after {
-  /*box-shadow: inset 40px 0 50px -30px rgba(222, 222, 222, 0.6), inset 40px 0 3px 0 rgba(242, 242, 242, 0.3);*/
   box-shadow: inset 40px 0 15px -35px rgba(0, 1, 1, 0.2), inset 40px 0 0 0 rgba(242, 242, 242, 1);
   right: -40px;
+}*/
+
+body {
+  box-shadow: 5px 0 15px 0 rgba(0, 1, 1, 0.2), -5px 0 15px 0 rgba(0, 1, 1, 0.2);
 }
+
+/*.none-shadows {
+  display: none;
+}*/

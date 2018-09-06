@@ -1,4 +1,5 @@
 
+var bodyBefore = document.querySelector("body:after");
 var link = document.querySelector(".button-search");
 var popup = document.querySelector(".hotel-search");
 var form = popup.querySelector(".hotel-search-form");
@@ -37,3 +38,7 @@ form.addEventListener("submit", function (evt) {
     }
   }
 });
+
+/*if (document.body.clientWidth<1280){
+  bodyBefore.classList.add("none-shadows");
+}*/

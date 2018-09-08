@@ -94,11 +94,44 @@ a.site-navigation-current {
   width: 100%;/*1200px;*/
   height: 510px;
   margin-bottom: 57px;
-  background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: /*50% 100%*/center bottom, 50% 50%, 0 21.5%;/*-55px;*/
-  /*background-size: auto, 459px 353px, cover;*/
-  background-size: 100% 59px, 459px 353px, 100% auto;
+  /*background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");*/
+  background-image: url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
+  position: relative;
+
+  /*background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center bottom, 50% 50%, 0 21.5%;*/
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 50%, 0 21.5%;
+
+  /*background-size: 100,7% 59px, 459px 353px, 100% auto;*/
+  background-size: 459px 353px, 100% auto;
+}
+
+body:after {
+  content: " ";
+  clear: both;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.welcome:after {
+  content: "";
+  width: 100%;/*1200px;*/
+  height: 60px;
+  position: absolute;
+  bottom: -1px;
+  /*background-image: url("../img/intro-mask.svg"), url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");*/
+  background-image: url("../img/intro-mask.svg");
+
+  /*background-position: center bottom, 50% 50%, 0 21.5%;*/
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+
+
+  /*background-size: 100,7% 59px, 459px 353px, 100% auto;*/
+  background-size: auto auto;/*59px;*/
 }
 
 main h1,
@@ -209,7 +242,7 @@ p.hotel-question {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
   margin-bottom: 24px;
 }
 
@@ -217,7 +250,7 @@ p.requesting-dates {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  margin-bottom: 46px;
+  /*margin-bottom: 46px;*/
 }
 
 .form-group {
@@ -298,6 +331,16 @@ p.requesting-dates {
   background-position: 0 0;
 }
 
+.filter-input-checkbox:focus + label,
+.filter-input-checkbox:focus + label {
+  outline: 2px solid #369fe0;
+}
+
+.filter-input-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
 .filter-input:disabled + label {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -325,7 +368,7 @@ p.requesting-dates {
   line-height: 18px;
   font-weight: 400;
   display: flex;
-  padding: 29px 6.083%;/*73px;*/
+  padding: 29px 6.083%;
   padding-bottom: 32px;
   vertical-align: baseline;
 }
@@ -631,6 +674,7 @@ body {
 
 .main-navigation img {
   position: absolute;
+  z-index: 3;
   left: 50%;
   margin-left: -70px;
 }
@@ -653,6 +697,8 @@ main h1 {
   width: calc(100%/3*2);
   background-color: rgb(129, 179, 210);
   overflow: hidden;
+  height: 256px;
+  vertical-align: middle;
 }
 
 img {
@@ -662,16 +708,22 @@ img {
 }
 
 .city-views img {
-width: 100%;
-height: auto;
-/*height: 100%;*/
-text-align:center;
-min-height: 100%;
-min-width: 100%;
+  all: initial;
+  width: 100%;
+  /*object-fit: cover;*/
+}
+
+.search-query img {
+  max-width: 100%;
+  margin:0 auto;
+  min-width: 1200px;
+  width: 1200px;
+  height: 593px;
 }
 
 .search-query {
   position: relative;
+  overflow: hidden;
 }
 
 .hotel-question,
@@ -679,6 +731,9 @@ min-width: 100%;
   width: 444px;
   text-align: center;
   margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 4;
 }
 
 .button-search{
@@ -687,43 +742,40 @@ min-width: 100%;
   /*height: 86px;*/
   margin: 0 auto;
   padding: 30px 0;
-}
-
-/*.hotel-question,
-.requesting-dates,
-.button-search {
+  position: relative;
   z-index: 4;
-}*/
+}
 
 .hotel-search {
   position: absolute;
   z-index: 2;
   left: 50%;
-  top: 240px;
-  /*width: 458px;*/
-  /*margin-left: -284px;*/
+  top: 290px;
   transform: translateX(-50%);
-  /* height: 285px;*/
   display: none;
 }
 
+.search {
+  padding-top: 50px;
+  padding-bottom: 46px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 4;
+}
+
 .modal-show {
-  /*height: 0;*/
   display: block;
-  animation: appearance 2s linear;
+  animation: appearance 0.5s linear;
 }
 
 @keyframes appearance {
-  /*0% {width: : 0;}
-  50% {width: : 50%;}
-  100% {width: : 100%;}*/
 
   0% {
-    transform: translateY(-100%) translateX(-50%);
+    transform: translateY(-72%) translateX(-50%);
   }
-  50% {
+  /*50% {
     transform: translateY(-50%) translateX(-50%);
-  }
+  }*/
   100% {
     transform: translateY(0) translateX(-50%);
   }
@@ -1111,11 +1163,11 @@ input[type="radio"].visually-hidden */
   overflow: hidden;
 }
 
-input[type="checkbox"].visually-hidden,
+/*input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
   visibility: hidden;
-}
+}*/
 
 
 /*body:before,

@@ -319,8 +319,7 @@ p.requesting-dates {
   background-position: 0 0;
 }
 
-.filter-input-checkbox:focus + label,
-.filter-input-checkbox:hover + label {
+.filter-input-checkbox:focus + label {
   outline: 2px solid #369fe0;
 }
 
@@ -329,8 +328,10 @@ p.requesting-dates {
   position: absolute;
 }
 
-.filter-input:disabled + label {
-  color: rgba(0, 0, 0, 0.3);
+.filter-input:disabled + label,
+.filter-input:disabled + label::before,
+.filter-input:disabled + label::after {
+  opacity: 0.4;
 }
 
 .filter-button {

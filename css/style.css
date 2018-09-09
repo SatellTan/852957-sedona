@@ -28,52 +28,33 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 15px 3% 15px 3%;
 }
 
-.navigation-left {
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.site-navigation li {
   vertical-align: middle;
-  width: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 15px 10.83% 15px 6%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 120px;/*11.36%;*/
 }
 
-.navigation-right {
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  vertical-align: middle;
-  width: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  padding: 15px 6% 15px 11.67%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.site-navigation li:nth-last-child(2) {
+  margin-left: auto;
+}
+
+.right-side {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 7.75%;/*123px;*/
+  margin-right: 3.2%;
+}
+
+.left-side {
+  flex-shrink: 0;
+  margin-right: 7.5%;/*120px;*/
+  margin-left: 3.15%;
 }
 
 .site-navigation a {
@@ -101,7 +82,7 @@ a.site-navigation-current {
   width: 100%;
   height: 510px;
   margin-bottom: 57px;
-  background-color: rgb(212, 229, 239);
+  background-color: rgb(212, 229, 239);/*(33, 43, 45);*/
   background-image: url("../img/intro-welcome.svg"), url("../img/welcome-sedona.jpg");
   position: relative;
   background-repeat: no-repeat, no-repeat;
@@ -321,7 +302,7 @@ p.requesting-dates {
 }
 
 .filter-input-checkbox:focus + label {
-  outline: 2px solid #369fe0;
+  outline: 2px solid rgb(144, 186, 254);
 }
 
 .filter-input-checkbox {
@@ -353,9 +334,9 @@ p.requesting-dates {
   background-color: #ffffff;
 }
 
-.main-header-logo:focus + img,
-.main-header-logo:active + img {
-  outline: 2px solid #369fe0;
+.main-header-logo:active img,
+.main-header-logo:focus img {
+  outline: 2px solid rgb(144, 186, 254);
 }
 
 .sorting {

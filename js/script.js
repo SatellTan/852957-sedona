@@ -16,6 +16,14 @@ try {
   isStorageSupport = false;
 }
 
+document.addEventListener('DOMContentLoaded', function(){
+  popup.classList.toggle("modal-close");
+  if (storage) {
+    adults.value = storage;
+    children.value = storage;
+  }
+}, false);
+
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.toggle("modal-show");

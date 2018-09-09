@@ -113,7 +113,7 @@ a.site-navigation-current {
   width: 100%;
   height: 60px;
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   background-image: url("../img/intro-mask.svg");
   background-repeat: no-repeat;
   background-position: 0 bottom;
@@ -284,6 +284,7 @@ p.requesting-dates {
 .filter-option label {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -319,7 +320,7 @@ p.requesting-dates {
 }
 
 .filter-input-checkbox:focus + label,
-.filter-input-checkbox:focus + label {
+.filter-input-checkbox:hover + label {
   outline: 2px solid #369fe0;
 }
 
@@ -366,6 +367,7 @@ p.requesting-dates {
   margin-left: 28px;
   width: 95px;
   display: inline-block;
+  vertical-align: middle;
   padding-top: 8px;
 }
 
@@ -861,6 +863,7 @@ img {
 
 .form-group label {
   display: inline-block;
+  vertical-align: middle;
   padding: 6px 0;
 }
 
@@ -1148,6 +1151,7 @@ img {
   width: 18px;
   height: 17px;
   display: inline-block;
+  vertical-align: top;
   margin-left: 2px;
   background-image: url("../img/star.svg");
   background-repeat: no-repeat;
@@ -1165,15 +1169,16 @@ img {
 .catalog h3 {
   width: 364px;
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .btn-group {
-  margin-top: 11px;
+  margin-top: 13px;
 }
 
 .item-info {
   display: inline-block;
+  vertical-align: middle;
   min-width: 110px;
   margin-right: 2px;
 }

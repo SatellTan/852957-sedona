@@ -29,7 +29,6 @@ form.addEventListener("submit", function (evt) {
   if (!dateIn.value || !dateOut.value || !adults.value || !children.value) {
     evt.preventDefault();
     console.log("Для корректного поиска необходимо заполнить все поля");
-    alert("Для корректного поиска необходимо заполнить все поля");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("adults", adults.value);

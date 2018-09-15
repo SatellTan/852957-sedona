@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -114,22 +114,22 @@
               </div>
               <div class="form-group  options-number">
                 <label for="adults">Взрослые:</label>
-                <input class="input-item input-number" id="adults" type="text" name="adults" value="2" placeholder="2" required>
-                <button class="btn-icon btn-more" type="button">
-                  <span class="visually-hidden">Увеличить число</span>
+                <button class="icon btn-less" type="button">
+                  <span class="visually-hidden">Уменьшить число на 1</span>
                 </button>
-                <button class="btn-icon btn-less" type="button">
-                  <span class="visually-hidden">Уменьшить число</span>
+                <input class="input-item input-number" id="adults" type="text" name="adults" value="2" placeholder="2" required>
+                <button class="icon btn-more" type="button">
+                  <span class="visually-hidden">Увеличить число на 1</span>
                 </button>
               </div>
               <div class="form-group  options-number">
                 <label for="children">Дети:</label>
-                <input class="input-item input-number" id="children" type="text" name="children" value="0" placeholder="0" required>
-                <button class="btn-icon btn-more" type="button">
-                  <span class="visually-hidden">Увеличить число</span>
+                <button class="icon btn-less" type="button">
+                  <span class="visually-hidden">Уменьшить число на 1</span>
                 </button>
-                <button class="btn-icon btn-less" type="button">
-                  <span class="visually-hidden">Уменьшить число</span>
+                <input class="input-item input-number" id="children" type="text" name="children" value="0" placeholder="0" required>
+                <button class="icon btn-more" type="button">
+                  <span class="visually-hidden">Увеличить число на 1</span>
                 </button>
               </div>
               <button class="button-find" type="submit">Найти</button>
@@ -192,6 +192,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

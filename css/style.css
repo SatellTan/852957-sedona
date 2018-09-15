@@ -74,8 +74,8 @@ a {
 
 a.site-navigation-current {
   color: #766357;
-  pointer-events: none; /*делаем элемент неактивным для взаимодействия*/
-  cursor: default; /*курсор в виде стрелки*/
+  pointer-events: none;
+  cursor: default;
 }
 
 .welcome {
@@ -828,14 +828,62 @@ img {
 }
 
 .options-number {
-  width: 226px;
-}
-.options-number:nth-child(2n) {
-  width: 180px;
+  width: 228px;
+  margin: 0 0 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .input-number {
+  width: 38px;
   text-align: center;
+  height: 37px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.options-number:last-of-type {
+  padding-left: 49px;
+}
+
+.icon {
+  position: relative;
+  width: 38px;
+  height: 37px;
+  background-color: #f2f2f2;
+  border: 0;
+  box-shadow: 0;
+}
+
+.btn-less {
+  margin-left: auto;
+}
+
+.icon::before {
+  content: "";
+  width: 11px;
+  height: 2px;
+  position: absolute;
+  left: 13px;
+  top: 19px;
+  background-color: #a9a9a9;
+}
+
+.btn-more::after {
+  content: "";
+  width: 2px;
+  height: 11px;
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  background-color: #a9a9a9;
 }
 
 .form-group {
@@ -871,37 +919,6 @@ img {
   cursor: pointer;
 }
 
-.btn-more {
-  right: 0;
-  width: 36px;
-  -ms-padding-top: 6px;
-  padding-top: 0;
-  padding-right: 13px;
-}
-
-.btn-less {
-  right: 78px;
-  padding-top: 0;
-  padding-right: 10px;
-  width: 36px;
-}
-
-.btn-less::before,
-.btn-more::before,
-.btn-more::after {
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 2px;
-  background-color: rgb(169, 169, 169);
-}
-
-.btn-more::after {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .btn-less:hover::before,
 .btn-less:focus::before,
 .btn-more:hover::before,
@@ -923,16 +940,6 @@ img {
   width: 346px;
   padding-right: 45px;
   padding-left: 12px;
-  font-size: 14px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
-.input-number {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 114px;
-  padding: 0 40px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
